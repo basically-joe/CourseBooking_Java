@@ -1,6 +1,7 @@
 package com.example.courseBooking.components;
 
 
+import com.example.courseBooking.models.Course;
 import com.example.courseBooking.repositories.BookingRepository.BookingRepository;
 import com.example.courseBooking.repositories.CourseRepository.CourseRepository;
 import com.example.courseBooking.repositories.CustomerRepository.CustomerRepository;
@@ -23,14 +24,18 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     CustomerRepository customerRepository;
 
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
 
-    }
 
     public DataLoader() {
 
+    }
 
+    @Override
+    public void run(ApplicationArguments args) {
+
+
+        Course course1 = new Course("Html", "Edinburgh", 3);
+        courseRepository
 
     }
 

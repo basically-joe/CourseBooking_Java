@@ -1,4 +1,4 @@
 package com.example.courseBooking.repositories.CourseRepository;
 
-public class CourseRepositoryImpl {
+public class CourseRepositoryImpl implements CourseRepositoryCustom{
 }
