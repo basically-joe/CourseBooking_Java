@@ -17,7 +17,7 @@ public class Customer {
 	private int age;
 	private List<Booking> bookings;
 
-	public Customer(String name, String town, int age, List<Booking> bookings) {
+	public Customer(String name, String town, int age) {
 		this.name = name;
 		this.town = town;
 		this.age = age;
