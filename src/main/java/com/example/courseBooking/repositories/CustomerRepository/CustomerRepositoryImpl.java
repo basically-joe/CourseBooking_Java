@@ -32,9 +32,29 @@ public class CustomerRepositoryImpl implements CustomerRepositoryCustom{
 
 
         return result;
-
     }
 
+
+
+    @Transactional
+    public List<Customer> getAllCustomerInAGivenTownForGivenCourse(String town, String name){
+        List<Customer> result = null;
+
+        Session session = entityManager.unwrap(Session.class);
+
+        Criteria cr = session.createCriteria(Customer.class);
+
+        cr.createAlias("bookings", "bookingsAlias");
+        cr.createAlias("bookingsAlias.course", "courseAlias");
+
+
+        cr.add(Restrictions.eq("courseAlias.town", town));
+        cr.add(Restrictions.eq("courseAlias.name", name));
+        result = cr.list();
+        
+
+        return result;
+    }
 
 
 }
