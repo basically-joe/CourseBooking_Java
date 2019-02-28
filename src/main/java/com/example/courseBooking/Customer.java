@@ -1,6 +1,8 @@
 package com.example.courseBooking;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,8 @@ public class Customer {
 	private String name;
 	private String town;
 	private int age;
+	@JsonIgnore
+	@OneToMany(mappedBy = "customer")
 	private List<Booking> bookings;
 
 	public Customer(String name, String town, int age) {
