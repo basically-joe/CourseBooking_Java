@@ -19,12 +19,12 @@ public class Booking {
 
 
     @ManyToOne
-    @JoinColumn(name = "course_id", nullable = false)
+    @JoinColumn(name = "course_id")
     private Course course;
 
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = false)
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
 
@@ -32,6 +32,10 @@ public class Booking {
         this.date = date;
         this.course = course;
         this.customer = customer;
+    }
+
+    public Booking(){
+
     }
 
     public Long getId() {
