@@ -1,4 +1,4 @@
-package com.example.courseBooking;
+package com.example.courseBooking.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

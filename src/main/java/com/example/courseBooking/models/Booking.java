@@ -1,5 +1,8 @@
-package com.example.courseBooking;
+package com.example.courseBooking.models;
 
+
+import com.example.courseBooking.models.Course;
+import com.example.courseBooking.models.Customer;
 
 import javax.persistence.*;
 
